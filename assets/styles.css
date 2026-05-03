@@ -474,3 +474,103 @@ p { color: var(--muted); }
   .avatar { width: min(260px, 100%); }
   .skill-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
+.wgj-theme {
+  --bg: #f4f7fa;
+  --surface-soft: #f8fbfd;
+  --text: #0d1520;
+  --muted: #566476;
+  --line: #dce6ef;
+  --blue: #1e86ff;
+  --blue-dark: #1264c4;
+}
+
+.wgj-app-icon {
+  width: 96px;
+  height: 96px;
+  border-radius: 22px;
+  object-fit: cover;
+  box-shadow: 0 18px 40px rgba(13, 21, 32, 0.16);
+}
+
+.wgj-app-icon.small {
+  width: 72px;
+  height: 72px;
+  border-radius: 18px;
+}
+
+.wgj-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+  gap: 54px;
+  align-items: center;
+  padding: 22px;
+  border-radius: 24px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.82), rgba(30, 134, 255, 0.10), rgba(44, 184, 217, 0.08)),
+    #e6edf4;
+}
+
+.wgj-panel {
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 20px;
+  background: rgba(248, 251, 253, 0.92);
+  box-shadow: 0 18px 48px rgba(13, 21, 32, 0.10);
+}
+
+.wgj-phone {
+  border-color: #0d1520;
+  background: linear-gradient(180deg, #f8fbfd, #dde7f0);
+}
+
+.wgj-phone .focus-ring {
+  border-color: rgba(30, 134, 255, 0.32);
+  box-shadow: 0 0 0 16px rgba(44, 184, 217, 0.10);
+}
+
+.wgj-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.wgj-stat {
+  padding: 16px;
+  border-radius: 16px;
+  background: #eef4f9;
+}
+
+.wgj-stat strong {
+  display: block;
+  color: #0d1520;
+  font-size: 26px;
+}
+
+.wgj-legal-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 22px 0 0;
+}
+
+.wgj-legal-nav a {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 10px 12px;
+  background: #f8fbfd;
+  color: #0d1520;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.notice {
+  border-left: 4px solid #b48a2d;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: rgba(180, 138, 45, 0.10);
+}
+
+@media (max-width: 860px) {
+  .wgj-hero, .wgj-stat-grid { grid-template-columns: 1fr; }
+  .wgj-app-icon { width: 84px; height: 84px; }
+}

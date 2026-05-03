@@ -1,9 +1,11 @@
 const currentPage = window.location.pathname.split("/").pop() || "index.html";
-const navPage = currentPage.startsWith("app-") ? "apps.html" : currentPage;
+const configuredNavPage = document.body.dataset.navPage;
+const navPage = configuredNavPage || (currentPage.startsWith("app-") ? "apps.html" : currentPage);
 
 document.querySelectorAll("[data-nav]").forEach((link) => {
   const href = link.getAttribute("href");
-  if (href === navPage || (navPage === "" && href === "index.html")) {
+  const hrefPage = href.split("/").filter(Boolean).pop() || "index.html";
+  if (hrefPage === navPage || (navPage === "" && hrefPage === "index.html")) {
     link.classList.add("active");
     link.setAttribute("aria-current", "page");
   }
