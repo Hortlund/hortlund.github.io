@@ -19,7 +19,9 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: var(--text);
-  background: var(--bg);
+  background:
+    radial-gradient(circle at 16% 8%, rgba(37, 99, 235, 0.08), transparent 28%),
+    linear-gradient(180deg, #f7f5ef, var(--bg) 42%);
   line-height: 1.5;
 }
 
@@ -231,6 +233,103 @@ p { color: var(--muted); }
 
 .hero-copy p { max-width: 430px; font-size: 18px; }
 
+.home-shell {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(252, 251, 247, 0.96)),
+    var(--surface);
+}
+
+.home-hero {
+  grid-template-columns: minmax(0, 0.95fr) minmax(260px, 0.72fr);
+  min-height: 500px;
+}
+
+.home-hero h1 {
+  font-size: clamp(54px, 8vw, 104px);
+  max-width: 720px;
+  margin-bottom: 18px;
+}
+
+.home-portrait {
+  margin: 0;
+  justify-self: end;
+  width: min(390px, 100%);
+}
+
+.home-portrait img {
+  width: 100%;
+  aspect-ratio: 0.82;
+  object-fit: cover;
+  object-position: 52% 42%;
+  border-radius: 28px;
+  filter: saturate(0.92) contrast(1.02);
+}
+
+.home-intro {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1fr);
+  gap: 58px;
+  align-items: start;
+  border-top: 1px solid var(--line);
+  padding-top: 42px;
+}
+
+.home-lines {
+  display: grid;
+  gap: 0;
+}
+
+.home-lines > div {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  gap: 20px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.home-lines span,
+.home-jump span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.home-lines p {
+  margin: 0;
+  color: var(--text);
+  font-size: clamp(18px, 2vw, 24px);
+  line-height: 1.28;
+}
+
+.home-jump {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 48px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.home-jump a {
+  display: grid;
+  gap: 8px;
+  padding: 24px 22px;
+  border-right: 1px solid var(--line);
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.home-jump a:last-child { border-right: 0; }
+
+.home-jump strong {
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.home-jump a:hover {
+  background: #f7f8fb;
+  transform: translateY(-2px);
+}
+
 .hero-shot {
   margin: 0;
   justify-self: center;
@@ -255,6 +354,11 @@ p { color: var(--muted); }
 
 @media (max-width: 860px) {
   .hero { grid-template-columns: 1fr; min-height: 0; gap: 34px; }
+  .home-hero h1 { font-size: clamp(48px, 16vw, 72px); }
+  .home-portrait { justify-self: start; width: min(330px, 100%); }
+  .home-intro, .home-jump { grid-template-columns: 1fr; }
+  .home-jump a { border-right: 0; border-bottom: 1px solid var(--line); }
+  .home-jump a:last-child { border-bottom: 0; }
   .featured-app { grid-template-columns: 1fr; }
 }
 
