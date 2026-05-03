@@ -431,6 +431,29 @@ p { color: var(--muted); }
   align-items: center;
 }
 
+.tool-list {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid var(--line);
+}
+
+.tool-list > div {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 20px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.tool-list span {
+  color: var(--text);
+  font-weight: 800;
+}
+
+.tool-list p {
+  margin: 0;
+}
+
 .skill {
   text-align: center;
   color: var(--muted);
@@ -485,6 +508,7 @@ p { color: var(--muted); }
   .profile, .skill-strip { grid-template-columns: 1fr; }
   .avatar { width: min(260px, 100%); }
   .skill-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tool-list > div { grid-template-columns: 1fr; gap: 6px; }
 }
 
 .wgj-theme {
