@@ -19,9 +19,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: var(--text);
-  background:
-    radial-gradient(circle at 16% 8%, rgba(37, 99, 235, 0.08), transparent 28%),
-    linear-gradient(180deg, #f7f5ef, var(--bg) 42%);
+  background: var(--bg);
   line-height: 1.5;
 }
 
@@ -234,100 +232,193 @@ p { color: var(--muted); }
 .hero-copy p { max-width: 430px; font-size: 18px; }
 
 .home-shell {
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(252, 251, 247, 0.96)),
-    var(--surface);
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: #f3efe6;
+}
+
+.home-shell main {
+  padding: 0;
+}
+
+.home-shell .site-header {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 5;
+  padding: 28px clamp(22px, 5vw, 72px);
+  color: #101214;
+}
+
+.home-shell .site-footer {
+  padding: 34px clamp(22px, 5vw, 72px);
+  background: #101214;
+  color: rgba(255, 255, 255, 0.82);
+  border-top: 0;
+}
+
+.home-shell .site-footer .muted,
+.home-shell .footer-links,
+.home-shell .social-links {
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.home-shell .nav a.active,
+.home-shell .nav a:hover {
+  color: #101214;
+  border-color: #101214;
+}
+
+.home-shell .button {
+  background: transparent;
+  border-color: rgba(16, 18, 20, 0.22);
+}
+
+.home-shell .button.primary {
+  background: #101214;
+  color: #fff;
+  border-color: #101214;
+}
+
+.home-shell .button:hover {
+  background: rgba(255, 255, 255, 0.42);
+}
+
+.home-shell .button.primary:hover {
+  background: #26292d;
 }
 
 .home-hero {
-  grid-template-columns: minmax(0, 0.95fr) minmax(260px, 0.72fr);
-  min-height: 500px;
+  position: relative;
+  min-height: 100svh;
+  padding: clamp(108px, 14vw, 170px) clamp(22px, 5vw, 72px) clamp(42px, 7vw, 84px);
+  grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.72fr);
+  gap: clamp(34px, 7vw, 96px);
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(243, 239, 230, 1) 0%, rgba(243, 239, 230, 0.94) 44%, rgba(243, 239, 230, 0.18) 100%),
+    #f3efe6;
 }
 
 .home-hero h1 {
-  font-size: clamp(54px, 8vw, 104px);
+  font-size: clamp(58px, 10vw, 138px);
+  line-height: 0.94;
   max-width: 720px;
-  margin-bottom: 18px;
+  margin-bottom: 24px;
+}
+
+.home-hero .hero-copy {
+  max-width: 720px;
+  animation: homeRise 520ms ease both;
+}
+
+.home-hero .hero-copy p {
+  max-width: 560px;
+  color: #33302b;
+  font-size: clamp(20px, 2vw, 28px);
+  line-height: 1.32;
+}
+
+.home-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 28px 0 30px;
+  color: #575149;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.home-meta span {
+  padding-top: 10px;
+  border-top: 1px solid rgba(16, 18, 20, 0.22);
 }
 
 .home-portrait {
   margin: 0;
   justify-self: end;
-  width: min(390px, 100%);
+  align-self: stretch;
+  width: min(470px, 100%);
+  min-height: 540px;
+  animation: portraitIn 680ms ease both;
 }
 
 .home-portrait img {
   width: 100%;
-  aspect-ratio: 0.82;
+  height: 100%;
   object-fit: cover;
-  object-position: 52% 42%;
-  border-radius: 28px;
-  filter: saturate(0.92) contrast(1.02);
+  object-position: 53% 45%;
+  border-radius: 2px;
+  filter: saturate(0.86) contrast(1.04);
 }
 
-.home-intro {
+.home-index {
   display: grid;
-  grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1fr);
-  gap: 58px;
+  grid-template-columns: minmax(220px, 0.5fr) minmax(0, 1fr);
+  gap: clamp(34px, 7vw, 96px);
   align-items: start;
-  border-top: 1px solid var(--line);
-  padding-top: 42px;
+  padding: clamp(52px, 8vw, 96px) clamp(22px, 5vw, 72px);
+  background: #ffffff;
 }
 
-.home-lines {
+.home-index h2 {
+  max-width: 430px;
+}
+
+.home-links {
   display: grid;
   gap: 0;
 }
 
-.home-lines > div {
+.home-links a {
   display: grid;
-  grid-template-columns: 52px minmax(0, 1fr);
+  grid-template-columns: 54px minmax(130px, 0.32fr) minmax(0, 1fr);
   gap: 20px;
-  padding: 18px 0;
+  align-items: baseline;
+  padding: 24px 0;
   border-bottom: 1px solid var(--line);
+  transition: color 160ms ease, transform 160ms ease;
 }
 
-.home-lines span,
-.home-jump span {
+.home-links a:first-child {
+  border-top: 1px solid var(--line);
+}
+
+.home-links span {
   color: var(--muted);
   font-size: 12px;
   font-weight: 800;
   text-transform: uppercase;
 }
 
-.home-lines p {
-  margin: 0;
+.home-links strong {
   color: var(--text);
-  font-size: clamp(18px, 2vw, 24px);
-  line-height: 1.28;
+  font-size: clamp(22px, 3vw, 34px);
+  line-height: 1;
 }
 
-.home-jump {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin-top: 48px;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+.home-links em {
+  color: var(--muted);
+  font-style: normal;
 }
 
-.home-jump a {
-  display: grid;
-  gap: 8px;
-  padding: 24px 22px;
-  border-right: 1px solid var(--line);
-  transition: background 160ms ease, transform 160ms ease;
+.home-links a:hover {
+  color: var(--blue);
+  transform: translateX(6px);
 }
 
-.home-jump a:last-child { border-right: 0; }
-
-.home-jump strong {
-  font-size: 20px;
-  line-height: 1.2;
+@keyframes homeRise {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.home-jump a:hover {
-  background: #f7f8fb;
-  transform: translateY(-2px);
+@keyframes portraitIn {
+  from { opacity: 0; transform: translateY(18px) scale(0.985); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
 .hero-shot {
@@ -354,11 +445,14 @@ p { color: var(--muted); }
 
 @media (max-width: 860px) {
   .hero { grid-template-columns: 1fr; min-height: 0; gap: 34px; }
+  .home-shell .site-header { position: static; background: #f3efe6; }
+  .home-shell .site-header, .home-shell .site-footer { padding: 22px; }
+  .home-hero { min-height: 0; padding: 48px 22px 36px; }
   .home-hero h1 { font-size: clamp(48px, 16vw, 72px); }
-  .home-portrait { justify-self: start; width: min(330px, 100%); }
-  .home-intro, .home-jump { grid-template-columns: 1fr; }
-  .home-jump a { border-right: 0; border-bottom: 1px solid var(--line); }
-  .home-jump a:last-child { border-bottom: 0; }
+  .home-portrait { justify-self: start; width: min(390px, 100%); min-height: 430px; }
+  .home-index { grid-template-columns: 1fr; padding: 44px 22px; }
+  .home-links a { grid-template-columns: 44px minmax(0, 1fr); }
+  .home-links em { grid-column: 2; }
   .featured-app { grid-template-columns: 1fr; }
 }
 
