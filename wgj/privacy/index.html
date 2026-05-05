@@ -10,42 +10,80 @@
   <body data-nav-page="apps.html">
     <div class="site-shell wgj-theme">
       <header class="site-header">
-        <a class="brand" href="../../index.html" aria-label="Andreas Hortlund home"><span class="brand-mark">AH</span><span>Andreas Hortlund</span></a>
+        <a class="brand" href="../../index.html" aria-label="highball.se home"><span class="brand-mark">hb</span><span>highball.se</span></a>
         <nav class="nav" aria-label="Primary navigation">
           <a href="../../index.html" data-nav>Home</a>
           <a href="../../apps.html" data-nav>Apps</a>
           <a href="../../about.html" data-nav>About</a>
-          <a href="../../support.html" data-nav>Support</a>
         </nav>
       </header>
       <main>
         <section class="page-title legal-copy" aria-labelledby="privacy-title">
           <span class="eyebrow">We Go Jim</span>
           <h1 id="privacy-title">Privacy Policy</h1>
-          <p>This policy explains what We Go Jim stores, syncs, and lets you delete. Last updated May 3, 2026.</p>
+          <p>This policy explains what We Go Jim stores, syncs, and lets you delete. Last updated May 5, 2026.</p>
         </section>
         <section class="section legal-copy" aria-label="Privacy policy">
+          <h2>Overview</h2>
+          <p>We Go Jim is a local-first iOS workout tracker. Core workout logging, templates, history, exercise catalog, and profile features are designed to work on your device even when iCloud is unavailable. We do not sell personal information, use advertising SDKs, or track you across other companies' apps or websites.</p>
+
           <h2>Data you create in the app</h2>
-          <p>We Go Jim stores workout sessions, active-workout drafts, templates, folders, exercise choices, custom exercises, notes, rest timers, goals, profile settings, avatar choices, dashboard widgets, and app preferences needed to run the workout tracker.</p>
+          <p>The app stores the training data needed to run the product: workout sessions, active-workout drafts, sets, reps, weights, cardio blocks, templates, folders, custom exercises, notes, rest timers, goals, profile settings, avatar choices, dashboard widgets, coach summaries, and app preferences.</p>
+
+          <h2>Local storage</h2>
+          <p>Most app data is stored locally using Apple's app storage technologies, including SwiftData and UserDefaults. Cached exercise images and imported or exported template files may also exist in app storage or files you choose to share. Deleting the app removes ordinary app-container data, subject to iOS behavior and any copies you exported or backed up elsewhere.</p>
+
           <h2>iCloud and CloudKit</h2>
-          <p>Core features work locally on device. When iCloud is available and configured, supported profile, workout, template, and Bros data may sync through Apple's iCloud and CloudKit services. If iCloud is unavailable, the app can fall back to local-only mode.</p>
+          <p>When iCloud is signed in and available, supported profile, workout, template, and Bros data may sync through Apple's iCloud and CloudKit services. If iCloud is unavailable, restricted, temporarily unavailable, or not signed in, We Go Jim can fall back to local-only behavior. iCloud and CloudKit processing is subject to Apple's own terms and privacy policy.</p>
+
           <h2>Bros social data</h2>
-          <p>If you use Bros, the app may store circle membership, invite status, workout feed posts, PR posts, reactions, reports, block-list data, display names, avatar data, and moderation context needed to operate the private social feature.</p>
-          <h2>Photos, notifications, and purchases</h2>
-          <p>PhotosUI may be used when you choose an avatar image. Notifications may be used for workout or app reminders if you grant permission. We Go Jim Pro purchases and subscription management are handled through App Store purchase systems and related providers used by the app.</p>
+          <p>If you use Bros, the app may store circle membership, invite codes, member limits, display names, athlete types, avatar data, workout feed posts, PR posts, reactions, reports, block-list data, and moderation context. Bros requires iCloud-backed behavior when available. Blocking is stored locally, while reports and shared feed records may be handled through CloudKit and support review.</p>
+
+          <h2>Photos, notifications, and files</h2>
+          <p>PhotosUI is used only when you choose an avatar image. The selected image is compressed for use as your profile/avatar image. Notifications may be used for rest timers and Bros reactions if you allow notifications in iOS. Template import/export uses files you choose to open, save, or share.</p>
+
+          <h2>Subscriptions and purchases</h2>
+          <p>We Go Jim Pro subscriptions are handled through Apple App Store purchase systems and RevenueCat. RevenueCat may process app user identifiers, entitlement status, purchase metadata, and device/app metadata needed to manage subscriptions, paywalls, restore purchases, and customer center features. Billing, refunds, cancellation, and subscription records are also handled by Apple.</p>
+
+          <h2>Coach features</h2>
+          <p>Coach Brief and follow-up analysis are generated from your saved workout history and local training summaries. Where available, the app may use Apple's on-device Foundation Models system to generate narrative text. If that system is unavailable, the app uses a local fallback summary. Generated coach text and cache records are stored with the app data and can be deleted through Delete My Data.</p>
+
           <h2>Support and moderation</h2>
-          <p>If you email support, the message, email address, diagnostic details you include, and moderation context you provide are used to respond to the request, investigate bugs, handle privacy questions, and review reports.</p>
+          <p>If you email support, the message, your email address, diagnostic details you include, and moderation context you provide are used to respond to the request, investigate bugs, handle privacy questions, review reports, and support App Store review or billing follow-up.</p>
+
+          <h2>What we do not collect</h2>
+          <p>We Go Jim does not use third-party advertising SDKs, does not sell personal information, and does not use cross-app tracking. The app does not read HealthKit data, location data, contacts, microphone input, or camera input as part of its normal workout tracking features. If those features are added later, this policy and the App Store privacy details should be updated before release.</p>
+
           <h2>Retention and deletion</h2>
-          <p>Data remains until you delete it, remove the app, use in-app deletion controls, or request support follow-up. Some data may remain where deletion is not technically possible, where another user controls the record, or where Apple/payment providers retain information for account, refund, tax, security, or legal reasons.</p>
-          <h2>Your choices</h2>
-          <p>You can use local-only functionality when cloud services are unavailable, manage notification permission in iOS Settings, block Bros members locally, report content, and use Delete My Data in the app. See <a href="../data-deletion/index.html">Data Deletion</a> for deletion instructions.</p>
+          <p>Data remains until you delete it, remove the app, use in-app deletion controls, or request support follow-up. Delete My Data removes local profile, workouts, active drafts, templates, widgets, custom exercises, cached coach summaries, block lists, social outbox items, cached exercise images, and supported synced Bros records for your own account when iCloud is reachable. Some data may remain where another user controls the record, where deletion is not technically possible, or where Apple, RevenueCat, payment providers, backups, tax, refund, fraud prevention, security, or legal requirements require retention.</p>
+
+          <h2>Your choices and rights</h2>
+          <p>You can use core features locally, manage iCloud in iOS Settings, manage notification permission in iOS Settings, choose whether to select an avatar image, block Bros members locally, report content, restore or manage subscriptions through Apple, and use Delete My Data in the app. Depending on your jurisdiction, you may also have rights to access, correct, delete, restrict, object to, or request portability of personal information.</p>
+
+          <h2>App Store privacy details</h2>
+          <p>The App Store privacy label for We Go Jim should match the current app build, including RevenueCat subscription handling, optional iCloud and CloudKit sync, optional Bros social data, optional avatar selection, notifications, and support emails. If the app changes how it collects, syncs, shares, or deletes data, the App Store privacy details should be reviewed before submission.</p>
+
+          <h2>Children's privacy</h2>
+          <p>We Go Jim is not directed to children under 13, or the minimum age required by local law. We do not knowingly collect personal information from children.</p>
+
+          <h2>International processing</h2>
+          <p>Apple, RevenueCat, and other platform services may process data in countries outside your country of residence. Their processing is governed by their own terms, privacy policies, and infrastructure.</p>
+
+          <h2>Changes</h2>
+          <p>This policy may be updated as the app changes. When it changes, the last updated date on this page will be updated.</p>
+
           <h2>Contact</h2>
-          <p>Questions about privacy, deletion, or moderation can be sent to <a href="mailto:support@wegojim.app">support@wegojim.app</a>.</p>
+          <p>If you have questions about privacy, deletion, subscriptions, or moderation, you can reach me at:</p>
+          <ul>
+            <li>Email: <a href="mailto:hortlund.andreas@gmail.com">hortlund.andreas@gmail.com</a></li>
+            <li>GitHub: <a href="https://github.com/Hortlund">github.com/Hortlund</a></li>
+            <li>X / Twitter: <a href="https://x.com/AndreasHortlund">@AndreasHortlund</a></li>
+          </ul>
         </section>
       </main>
       <footer class="site-footer">
-        <div><a class="brand" href="../index.html"><img class="wgj-app-icon small" src="../../assets/wgj-app-icon.png" alt=""><span>We Go Jim</span></a><p class="muted">&copy; <span data-current-year></span> Andreas Hortlund. All rights reserved.</p></div>
-        <div class="footer-links"><a href="../support/index.html">Support</a><a href="../terms/index.html">Terms</a><a href="../community-guidelines/index.html">Guidelines</a><a href="../data-deletion/index.html">Data Deletion</a></div>
+        <div><a class="brand" href="../index.html"><img class="wgj-app-icon small" src="../../assets/wgj-app-icon.png" alt=""><span>We Go Jim</span></a><p class="muted">&copy; <span data-current-year></span> highball.se. All rights reserved.</p></div>
+        <div class="footer-links"><a href="../privacy/index.html">Privacy</a><a href="../terms/index.html">Terms</a></div>
       </footer>
     </div>
     <script src="../../assets/script.js"></script>
