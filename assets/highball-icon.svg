@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title>ハイボ</title>
+  <defs>
+    <linearGradient id="markGradient" x1="96" y1="64" x2="416" y2="448" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7ce3ef"/>
+      <stop offset="0.54" stop-color="#6db5ff"/>
+      <stop offset="1" stop-color="#62d8a6"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="120" fill="url(#markGradient)"/>
+  <text x="256" y="286" text-anchor="middle" dominant-baseline="middle"
+        fill="#071017"
+        font-family="-apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Yu Gothic', sans-serif"
+        font-size="136"
+        font-weight="900">ハイボ</text>
+</svg>
