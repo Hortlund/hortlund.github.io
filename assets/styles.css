@@ -2934,3 +2934,83 @@ main,
       linear-gradient(180deg, transparent 0%, rgba(109, 181, 255, 0.05) 46%, transparent 100%);
   }
 }
+
+/* Lil Log */
+.lil-log-theme {
+  background:
+    radial-gradient(circle at top right, rgba(37, 99, 235, 0.08), transparent 34rem),
+    var(--surface);
+}
+
+.lil-log-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 340px);
+  gap: 28px;
+  align-items: end;
+  margin-bottom: 48px;
+}
+
+.lil-log-hero p {
+  max-width: 690px;
+  font-size: 18px;
+}
+
+.lil-log-note {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface-soft);
+  padding: 22px;
+  box-shadow: 0 12px 35px rgba(20, 28, 45, 0.04);
+}
+
+.lil-log-note span,
+.post-meta,
+.lil-post-card time {
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.lil-log-note p { margin: 10px 0 0; }
+
+.lil-post-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.lil-post-card,
+.lil-long-post {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: white;
+  padding: 24px;
+  box-shadow: 0 12px 35px rgba(20, 28, 45, 0.04);
+}
+
+.lil-post-card h3 { margin-top: 12px; }
+
+.lil-post-body {
+  display: grid;
+  gap: 22px;
+  max-width: 860px;
+}
+
+.lil-long-post {
+  scroll-margin-top: 24px;
+}
+
+.lil-long-post h2 { margin-top: 10px; }
+
+.lil-long-post p {
+  font-size: 17px;
+}
+
+@media (max-width: 860px) {
+  .lil-log-hero,
+  .lil-post-list {
+    grid-template-columns: 1fr;
+  }
+}
