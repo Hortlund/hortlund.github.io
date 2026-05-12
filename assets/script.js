@@ -34,7 +34,7 @@ if (lilPostList) {
     .sort((a, b) => {
       const dateDiff = new Date(b.dataset.date || 0) - new Date(a.dataset.date || 0);
       if (dateDiff !== 0) return dateDiff;
-      return posts.indexOf(b) - posts.indexOf(a);
+      return Number(b.dataset.order || 0) - Number(a.dataset.order || 0);
     })
     .forEach((post) => lilPostList.appendChild(post));
 

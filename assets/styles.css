@@ -3140,3 +3140,47 @@ main,
     max-width: none;
   }
 }
+
+@media (max-width: 640px) {
+  .lil-log-controls {
+    margin: 2px 0 24px;
+  }
+
+  .lil-log-search {
+    gap: 10px;
+  }
+
+  .lil-log-search span {
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .lil-log-search input {
+    min-height: 48px;
+    font-size: 16px;
+    border-radius: 14px;
+    background: rgba(16, 25, 35, 0.72);
+  }
+
+  .lil-tag-filter {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 2px 0 8px;
+    margin-right: -18px;
+    scrollbar-width: none;
+  }
+
+  .lil-tag-filter::-webkit-scrollbar {
+    display: none;
+  }
+
+  .lil-tag-button {
+    flex: 0 0 auto;
+    padding: 7px 11px;
+  }
+
+  .lil-post-count {
+    font-size: 13px;
+  }
+}
