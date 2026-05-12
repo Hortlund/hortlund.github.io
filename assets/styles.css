@@ -3014,3 +3014,13 @@ main,
     grid-template-columns: 1fr;
   }
 }
+
+.lil-single-post {
+  max-width: 860px;
+  margin-top: 28px;
+}
+
+.lil-single-post h1 {
+  font-size: clamp(38px, 6vw, 64px);
+  margin-top: 10px;
+}
