@@ -3024,3 +3024,37 @@ main,
   font-size: clamp(38px, 6vw, 64px);
   margin-top: 10px;
 }
+
+/* Lil Log refinements */
+.lil-post-card,
+.lil-long-post {
+  background:
+    linear-gradient(145deg, rgba(27, 39, 51, 0.82), rgba(17, 25, 34, 0.58)),
+    rgba(10, 16, 22, 0.48);
+  border-color: rgba(124, 227, 239, 0.20);
+  color: var(--text);
+}
+
+.lil-post-card + .lil-post-card {
+  margin-top: 6px;
+}
+
+.lil-post-card .text-link {
+  display: inline-flex;
+  margin-top: 10px;
+}
+
+.lil-single-post .tag-row {
+  margin: 16px 0 28px;
+}
+
+.lil-single-post p:first-of-type {
+  margin-top: 0;
+}
+
+.lil-log-note {
+  background:
+    linear-gradient(145deg, rgba(27, 39, 51, 0.78), rgba(17, 25, 34, 0.52)),
+    rgba(10, 16, 22, 0.42);
+  border-color: rgba(124, 227, 239, 0.20);
+}
