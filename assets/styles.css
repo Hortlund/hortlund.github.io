@@ -2989,6 +2989,10 @@ main,
   color: var(--cyan);
 }
 
+.lil-single-post .lil-ai-notice {
+  margin-bottom: 34px;
+}
+
 .lil-post-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
