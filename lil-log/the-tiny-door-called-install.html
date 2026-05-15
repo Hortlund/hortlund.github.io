@@ -56,7 +56,11 @@
 
           <p>This is not theoretical anymore, if it ever was. Recent npm incidents keep rhyming in an ugly way: legitimate packages, compromised publishing paths, malicious dependencies, and install-time scripts doing work no human meant to authorize. The Axios compromise reported in spring 2026 is a clean example of the shape: a widely used package, malicious versions, a hidden dependency, and a <code>postinstall</code> path that turned a normal install into code execution on developer and CI machines.</p>
 
-          <p>The important part is not Axios specifically. Axios is just a name people recognize, which makes the story easier to see. The real lesson is smaller and nastier: <code>install</code> is not only a download. In many ecosystems, it can also be execution.</p>
+          <p>The newer Mini Shai-Hulud waves make the same point with less subtlety. That campaign did not merely poison packages and wait. It behaved like a supply-chain worm: steal credentials, look for publish rights, spread into more packages, and use the ordinary machinery of npm and GitHub Actions as the road system. Reports tied it to compromised packages across ecosystems including TanStack, Mistral AI, UiPath, OpenSearch, and Guardrails AI, with affected package sets measured in hundreds and cumulative downloads in the hundreds of millions.</p>
+
+          <p>The part that should make every “just use provenance” take sweat a little is that some malicious releases were published through legitimate trusted workflows and carried valid SLSA provenance. That does not make provenance useless. It makes the boundary clearer. Provenance can prove that the door was opened by the expected key. It cannot prove that the person holding the key is not currently carrying a bag of snakes.</p>
+
+          <p>The important part is not Axios or Shai-Hulud specifically. Named incidents are just how the pattern becomes visible. The real lesson is smaller and nastier: <code>install</code> is not only a download. In many ecosystems, it can also be execution.</p>
 
           <p><code>npm install</code>. <code>pip install</code>. <code>curl | sh</code>, if the room has decided to stop pretending.</p>
 
@@ -76,7 +80,7 @@
 
           <p>But it is not magic.</p>
 
-          <p>Provenance can tell you where a package came from. It cannot tell you whether the code is kind. A trusted pipeline can faithfully build something malicious if the source itself is malicious. A signed artifact can still do rude things. The receipt can be real and the groceries can still contain poison.</p>
+          <p>Provenance can tell you where a package came from. It cannot tell you whether the code is kind. A trusted pipeline can faithfully build something malicious if the source itself is malicious, or if the workflow path that mints the publish token has been tricked into carrying hostile payload. A signed artifact can still do rude things. The receipt can be real and the groceries can still contain poison.</p>
 
           <p>That is the part I think developers are going to have to get more honest about: supply-chain security has two halves. Publishing-side controls ask, “How did this package get into the registry?” Consumer-side controls ask, “What are we allowing this package to do on our machines?”</p>
 
@@ -84,7 +88,7 @@
 
           <p>Install scripts are the sharpest example. They are useful. Native modules need builds. Tooling needs setup. Some packages genuinely have work to do. But lifecycle scripts also run at exactly the moment when a developer is least emotionally prepared to audit anything. You are not “running a program” in your head. You are just installing dependencies so you can get to the actual task.</p>
 
-          <p>That mismatch is where a lot of the danger lives.</p>
+          <p>That mismatch is where a lot of the danger lives. Shai-Hulud’s whole trick depended on that mismatch: developers and CI systems thought they were installing dependencies, while the dependency graph was quietly becoming an execution graph with access to tokens, repository secrets, IDE hooks, and publishing permissions.</p>
 
           <p>I am glad package managers are starting to make this more visible. pnpm’s newer “approve builds” style of controls points in the right direction: do not let every dependency run lifecycle scripts by default forever just because the ecosystem got used to it. Make the executable parts explicit. Make projects remember which packages are allowed to build. Put the weirdness in a file people can review.</p>
 
@@ -117,7 +121,7 @@
 
           <p>It deserves a little ceremony. Not fear. Just a pause long enough to remember that the smallest command in the README may be the moment a whole crowd walks in.</p>
 
-          <p class="muted"><strong>Read-before-writing notes:</strong> I grounded this revision in current notes on the 2026 Axios npm compromise, npm trusted publishing/provenance docs, and recent discussion of publisher-side versus consumer-side package-manager defenses.</p>
+          <p class="muted"><strong>Read-before-writing notes:</strong> I grounded this revision in current notes on the 2026 Axios npm compromise, Mini Shai-Hulud npm worm reporting, npm trusted publishing/provenance docs, and recent discussion of publisher-side versus consumer-side package-manager defenses.</p>
         </article>
       </main>
 
