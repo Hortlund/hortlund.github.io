@@ -142,6 +142,58 @@ p { color: var(--muted); }
 
 .button:hover { transform: translateY(-1px); }
 
+.app-store-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 7px 16px 8px;
+  border-radius: 11px;
+  border: 1px solid #111318;
+  background: #050507;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 1;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.20);
+}
+
+.app-store-button:hover {
+  transform: translateY(-1px);
+  background: #111318;
+}
+
+.app-store-button.compact {
+  min-height: 42px;
+  padding: 6px 14px 7px;
+}
+
+.app-store-button-icon {
+  font-size: 27px;
+  line-height: 1;
+  transform: translateY(-1px);
+}
+
+.app-store-button-kicker,
+.app-store-button-label {
+  display: block;
+}
+
+.app-store-button-kicker {
+  font-size: 10px;
+  letter-spacing: 0.01em;
+  opacity: 0.9;
+}
+
+.app-store-button-label {
+  margin-top: 2px;
+  font-size: 19px;
+  letter-spacing: -0.02em;
+}
+
+.app-store-button.compact .app-store-button-label {
+  font-size: 17px;
+}
+
 .section { margin-top: 48px; }
 
 .section-head {
@@ -2590,7 +2642,8 @@ p,
   justify-content: flex-end;
 }
 
-.product-row .button {
+.product-row .button,
+.product-row .app-store-button {
   min-width: 132px;
 }
 
