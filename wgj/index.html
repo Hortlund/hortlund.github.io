@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>We Go Jim — Private Workout Tracker &amp; Gym Log for iPhone</title>
-    <meta name="description" content="We Go Jim is a free, private workout tracker and gym log for iPhone. Log sets fast, build routines, track PRs, and train offline without an account.">
+    <meta name="description" content="We Go Jim is a free workout tracker for iPhone with guided supersets, dropsets, outdoor GPS routes, progress recaps, and optional Apple Health export.">
     <meta name="robots" content="index,follow,max-image-preview:large">
     <meta name="theme-color" content="#0b0d10">
     <link rel="canonical" href="https://highball.se/wgj/">
@@ -30,7 +30,7 @@
         "alternateName": "We Go Jim",
         "operatingSystem": "iOS",
         "applicationCategory": "HealthApplication",
-        "description": "A free, private workout tracker and gym log for iPhone with fast set logging, reusable routines, PR tracking, progress history, and offline access.",
+        "description": "A free, private workout tracker for iPhone with guided supersets, independent drop stages, outdoor GPS recording, progress recaps, optional Apple Health export, and offline workout logging.",
         "url": "https://highball.se/wgj/",
         "downloadUrl": "https://apps.apple.com/us/app/we-go-jim/id6760931499",
         "installUrl": "https://apps.apple.com/us/app/we-go-jim/id6760931499",
@@ -40,7 +40,12 @@
         "featureList": [
           "Fast set, rep, and weight logging",
           "Reusable workout routines and templates",
+          "Guided superset rounds and per-set drop stages",
+          "Outdoor walk and run GPS routes, distance, and pace",
+          "Optional Apple Health workout and estimated calorie export",
+          "Optional workout Live Activities",
           "Personal records and progress history",
+          "Training journeys and yearly recaps",
           "Offline workout logging without an account",
           "No advertising or cross-app tracking"
         ],
@@ -74,7 +79,17 @@
           {
             "@type": "Question",
             "name": "What can I track with We Go Jim?",
-            "acceptedAnswer": { "@type": "Answer", "text": "You can track sets, reps, weight, cardio blocks, rest timers, notes, personal records, training volume, workout history, templates, goals, and progress trends." }
+            "acceptedAnswer": { "@type": "Answer", "text": "You can track sets, reps, weight, supersets, drop stages, cardio duration, distance and pace, rest timers, notes, personal records, training volume, templates, goals, and progress trends. Outdoor walks and runs can record GPS routes with permission. Saved history powers training journeys and yearly recaps." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does We Go Jim connect to Apple Health?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes, if you enable it. Apple Health export is off by default. With permission, it saves newly completed workouts; estimated active calories have a separate opt-in. WGJ does not request access to other apps' Health data. Later edits or deletions in WGJ do not change records already saved to Health." }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need to allow location access?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Only to record GPS routes for Outdoor Walk or Outdoor Run. With Precise Location permission, recording can continue while your screen is locked; pausing or finishing stops GPS. You can log other workouts without location access and enter cardio distance manually. Completed routes can join your private iCloud backup." }
           },
           {
             "@type": "Question",
@@ -139,7 +154,7 @@
           <div class="section-head">
             <div>
               <span class="eyebrow">Workout tracker for iPhone</span>
-              <h2 id="wgj-details-title">Everything needed to plan, log, and review strength training.</h2>
+              <h2 id="wgj-details-title">Plan your lifts. Record your cardio. See your progress.</h2>
             </div>
           </div>
           <div class="wgj-feature-showcase">
@@ -147,11 +162,11 @@
               <div class="wgj-feature-copy">
                 <span class="wgj-feature-label">During your workout</span>
                 <h3>Fast gym logging that stays out of your way.</h3>
-                <p>Previous performance is right there. Sets take seconds to log. Rest timers, notes, warm-ups, supersets, dropsets, and cardio are ready when you need them.</p>
+                <p>Previous performance is right there. Sets take seconds to log. Supersets guide you from A1 to A2, then rest before the next round. Each set keeps its own drop stages, weights, and reps.</p>
                 <div class="wgj-feature-chips" aria-label="Workout logging features">
                   <span>Previous sets</span>
-                  <span>Rest timer</span>
-                  <span>PR tracking</span>
+                  <span>Guided supersets</span>
+                  <span>Independent drops</span>
                 </div>
               </div>
               <figure class="wgj-workout-preview">
@@ -165,7 +180,7 @@
                 <span class="wgj-benefit-number" aria-hidden="true">01</span>
                 <div>
                   <h3>Reusable templates</h3>
-                  <p>Build routines once, start them quickly, and keep previous performance close when it is time to progress.</p>
+                  <p>Plan warm-ups, pair exercises into supersets, and add drop stages to individual sets. Save the routine and bring those targets into your next workout.</p>
                   <div class="wgj-mini-signal"><span>Push</span><span>Pull</span><span>Legs</span></div>
                 </div>
               </article>
@@ -173,7 +188,7 @@
                 <span class="wgj-benefit-number" aria-hidden="true">02</span>
                 <div>
                   <h3>Progress you can read</h3>
-                  <p>Review PRs, best sets, volume, exercise history, trends, calendar summaries, and muscle heatmaps.</p>
+                  <p>Review PRs, volume, exercise history, and muscle heatmaps. Follow your training journey and revisit the year's highlights in a recap.</p>
                   <div class="wgj-progress-signal" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
                 </div>
               </article>
@@ -181,8 +196,29 @@
                 <span class="wgj-benefit-number" aria-hidden="true">03</span>
                 <div>
                   <h3>Local-first by design</h3>
-                  <p>Your core training loop remains usable on-device. Cloud backup is additive, never the price of admission.</p>
+                  <p>Log workouts and edit templates on your device. Supported saved data can use private iCloud backup and restore when available; active drafts stay local.</p>
                   <div class="wgj-local-signal"><span></span> Available on-device</div>
+                </div>
+              </article>
+              <article class="wgj-benefit">
+                <span class="wgj-benefit-number" aria-hidden="true">04</span>
+                <div>
+                  <h3>Outdoor walks and runs</h3>
+                  <p>Record time, distance, pace, and a GPS route with location permission. Pause when you need to, then review the route with your saved workout.</p>
+                </div>
+              </article>
+              <article class="wgj-benefit">
+                <span class="wgj-benefit-number" aria-hidden="true">05</span>
+                <div>
+                  <h3>Apple Health, when you choose</h3>
+                  <p>Opt in to save newly completed workouts to Apple Health. Share available estimated active calories separately, or keep your workout log in WGJ.</p>
+                </div>
+              </article>
+              <article class="wgj-benefit">
+                <span class="wgj-benefit-number" aria-hidden="true">06</span>
+                <div>
+                  <h3>A glance at your workout</h3>
+                  <p>Turn on Live Activities to see workout timers, set progress, rest countdowns, or cardio stats on the Lock Screen and Dynamic Island where supported.</p>
                 </div>
               </article>
             </div>
@@ -235,7 +271,15 @@
             </details>
             <details class="faq-item">
               <summary>What can I track?</summary>
-              <p>Sets, reps, weight, cardio blocks, rest timers, notes, personal records, training volume, workout history, templates, goals, and progress trends.</p>
+              <p>You can track sets, reps, weight, supersets, drop stages, cardio duration, distance and pace, rest timers, notes, personal records, training volume, templates, goals, and progress trends. Outdoor walks and runs can record GPS routes with permission. Saved history powers training journeys and yearly recaps.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Does We Go Jim connect to Apple Health?</summary>
+              <p>Yes, if you enable it. Apple Health export is off by default. With permission, it saves newly completed workouts; estimated active calories have a separate opt-in. WGJ does not request access to other apps' Health data. Later edits or deletions in WGJ do not change records already saved to Health.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Do I need to allow location access?</summary>
+              <p>Only to record GPS routes for Outdoor Walk or Outdoor Run. With Precise Location permission, recording can continue while your screen is locked; pausing or finishing stops GPS. You can log other workouts without location access and enter cardio distance manually. Completed routes can join your private iCloud backup.</p>
             </details>
             <details class="faq-item">
               <summary>How do I request a feature or report a bug?</summary>
