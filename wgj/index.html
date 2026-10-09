@@ -3,22 +3,24 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>We Go Jim — Private Workout Tracker &amp; Gym Log for iPhone</title>
-    <meta name="description" content="We Go Jim is a free, private workout tracker and gym log for iPhone. Log sets fast, build routines, track PRs, and train offline without an account.">
+    <title>We Go Jim — Private Workout Tracker &amp; Gym Log for iPhone and iPad</title>
+    <meta name="description" content="We Go Jim is a free workout tracker for iPhone and iPad with guided supersets, dropsets, outdoor GPS routes, progress recaps, and optional Apple Health export.">
     <meta name="robots" content="index,follow,max-image-preview:large">
     <meta name="theme-color" content="#0b0d10">
     <link rel="canonical" href="https://highball.se/wgj/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="highball.se">
     <meta property="og:title" content="We Go Jim — Private Workout Tracker &amp; Gym Log">
-    <meta property="og:description" content="Fast workout logging on iPhone. No account, no ads, no tracking, and the core training loop works offline.">
+    <meta property="og:description" content="Fast workout logging on iPhone and iPad. No account, no ads, no tracking, and the core training loop works offline.">
     <meta property="og:url" content="https://highball.se/wgj/">
-    <meta property="og:image" content="https://highball.se/assets/wgj-active-workout.png">
-    <meta property="og:image:alt" content="We Go Jim active workout logging screen">
+    <meta property="og:image" content="https://highball.se/assets/wgj-search-result.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="800">
+    <meta property="og:image:alt" content="We Go Jim — Plan. Lift. Progress. Workout tracking for iPhone and iPad.">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="We Go Jim — Private Workout Tracker &amp; Gym Log">
-    <meta name="twitter:description" content="Fast workout logging on iPhone. No account, no ads, no tracking, and the core training loop works offline.">
-    <meta name="twitter:image" content="https://highball.se/assets/wgj-active-workout.png">
+    <meta name="twitter:description" content="Fast workout logging on iPhone and iPad. No account, no ads, no tracking, and the core training loop works offline.">
+    <meta name="twitter:image" content="https://highball.se/assets/wgj-search-result.jpg">
     <meta name="apple-itunes-app" content="app-id=6760931499, app-argument=https://apps.apple.com/us/app/we-go-jim/id6760931499">
     <link rel="icon" type="image/svg+xml" href="../assets/highball-icon.svg">
     <link rel="stylesheet" href="../assets/styles.css">
@@ -28,19 +30,24 @@
         "@type": "MobileApplication",
         "name": "We Go Jim — Workout Tracker & Gym Log",
         "alternateName": "We Go Jim",
-        "operatingSystem": "iOS",
+        "operatingSystem": "iOS 18.0 or later, iPadOS 18.0 or later",
         "applicationCategory": "HealthApplication",
-        "description": "A free, private workout tracker and gym log for iPhone with fast set logging, reusable routines, PR tracking, progress history, and offline access.",
+        "description": "A free, private workout tracker for iPhone and iPad with guided supersets, independent drop stages, outdoor GPS recording, progress recaps, optional Apple Health export, and offline workout logging.",
         "url": "https://highball.se/wgj/",
         "downloadUrl": "https://apps.apple.com/us/app/we-go-jim/id6760931499",
         "installUrl": "https://apps.apple.com/us/app/we-go-jim/id6760931499",
         "sameAs": ["https://apps.apple.com/us/app/we-go-jim/id6760931499"],
         "image": "https://highball.se/assets/wgj-app-icon.png",
-        "screenshot": "https://highball.se/assets/wgj-active-workout.png",
+        "screenshot": ["https://highball.se/assets/wgj-active-workout.png", "https://highball.se/assets/wgj-profile.png", "https://highball.se/assets/wgj-journey.png", "https://highball.se/assets/wgj-ipad-profile.png"],
         "featureList": [
           "Fast set, rep, and weight logging",
           "Reusable workout routines and templates",
+          "Guided superset rounds and per-set drop stages",
+          "Outdoor walk, run, and bike GPS routes, distance, and pace",
+          "Optional Apple Health workout and estimated calorie export",
+          "Optional workout Live Activities",
           "Personal records and progress history",
+          "Training journeys and yearly recaps",
           "Offline workout logging without an account",
           "No advertising or cross-app tracking"
         ],
@@ -74,7 +81,17 @@
           {
             "@type": "Question",
             "name": "What can I track with We Go Jim?",
-            "acceptedAnswer": { "@type": "Answer", "text": "You can track sets, reps, weight, cardio blocks, rest timers, notes, personal records, training volume, workout history, templates, goals, and progress trends." }
+            "acceptedAnswer": { "@type": "Answer", "text": "You can track sets, reps, weight, supersets, drop stages, cardio duration, distance and pace, rest timers, notes, personal records, training volume, templates, goals, and progress trends. Outdoor walks, runs, and bike rides can record GPS routes with permission. Saved history powers training journeys, achievement goals, shareable milestones and personal records, and yearly recaps." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does We Go Jim connect to Apple Health?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes, if you enable it. Apple Health export is off by default. With permission, it saves newly completed workouts; estimated active calories have a separate opt-in. WGJ does not request access to other apps' Health data. Later edits or deletions in WGJ do not change records already saved to Health." }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need to allow location access?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Only to record GPS routes for Outdoor Walk, Outdoor Run, or Outdoor Bike. With Precise Location permission, recording can continue while your screen is locked; pausing or finishing stops GPS. You can log other workouts without location access and enter cardio distance manually. Completed routes can join your private iCloud backup." }
           },
           {
             "@type": "Question",
@@ -108,8 +125,8 @@
           <div>
             <img class="wgj-app-icon" src="../assets/wgj-app-icon.png" alt="We Go Jim app icon">
             <span class="eyebrow">Now on the App Store</span>
-            <h1 id="wgj-title">We Go Jim — Workout Tracker &amp; Gym Log</h1>
-            <p>A free, private workout tracker for iPhone. Log sets fast, build reusable routines, track PRs, and keep training offline — no account, ads, or cross-app tracking.</p>
+            <h1 id="wgj-title">We Go Jim</h1>
+            <p>A free, private workout tracker for iPhone and iPad. Log sets fast, build reusable routines, track PRs, and keep training offline — no account, ads, or cross-app tracking.</p>
             <div class="button-row">
               <a class="app-store-badge-link" href="https://apps.apple.com/us/app/we-go-jim/id6760931499" target="_blank" rel="noopener" aria-label="Download We Go Jim on the App Store">
                 <img class="app-store-badge" src="../assets/download-on-app-store.svg" alt="Download on the App Store">
@@ -118,9 +135,13 @@
           </div>
 
           <figure class="hero-shot">
-            <img src="../assets/wgj-active-workout.png" alt="We Go Jim active workout logging screen">
+            <img src="../assets/wgj-active-workout.png" width="1206" height="2622" alt="We Go Jim active workout logging screen">
           </figure>
         </section>
+
+        <figure class="section wgj-campaign">
+          <img src="../assets/wgj-header.jpg" width="1920" height="823" loading="lazy" alt="We Go Jim. We're all going to make it. Blue-lit gym weights.">
+        </figure>
 
         <section class="section chart-milestone" aria-labelledby="wgj-chart-title">
           <div class="chart-app-mark">
@@ -138,8 +159,8 @@
         <section class="section" aria-labelledby="wgj-details-title">
           <div class="section-head">
             <div>
-              <span class="eyebrow">Workout tracker for iPhone</span>
-              <h2 id="wgj-details-title">Everything needed to plan, log, and review strength training.</h2>
+              <span class="eyebrow">Workout tracker for iPhone and iPad</span>
+              <h2 id="wgj-details-title">Plan your lifts. Record your cardio. See your progress.</h2>
             </div>
           </div>
           <div class="wgj-feature-showcase">
@@ -147,15 +168,15 @@
               <div class="wgj-feature-copy">
                 <span class="wgj-feature-label">During your workout</span>
                 <h3>Fast gym logging that stays out of your way.</h3>
-                <p>Previous performance is right there. Sets take seconds to log. Rest timers, notes, warm-ups, supersets, dropsets, and cardio are ready when you need them.</p>
+                <p>Previous performance is right there. Sets take seconds to log. Supersets guide you from A1 to A2, then rest before the next round. Each set keeps its own drop stages, weights, and reps.</p>
                 <div class="wgj-feature-chips" aria-label="Workout logging features">
                   <span>Previous sets</span>
-                  <span>Rest timer</span>
-                  <span>PR tracking</span>
+                  <span>Guided supersets</span>
+                  <span>Independent drops</span>
                 </div>
               </div>
               <figure class="wgj-workout-preview">
-                <img src="../assets/wgj-active-workout.png" alt="The actual We Go Jim active workout logging screen">
+                <img src="../assets/wgj-active-workout.png" width="1206" height="2622" alt="The actual We Go Jim active workout logging screen">
                 <figcaption>Actual in-app workout flow</figcaption>
               </figure>
             </article>
@@ -165,7 +186,7 @@
                 <span class="wgj-benefit-number" aria-hidden="true">01</span>
                 <div>
                   <h3>Reusable templates</h3>
-                  <p>Build routines once, start them quickly, and keep previous performance close when it is time to progress.</p>
+                  <p>Plan warm-ups, pair exercises into supersets, and add drop stages to individual sets. Save the routine and bring those targets into your next workout.</p>
                   <div class="wgj-mini-signal"><span>Push</span><span>Pull</span><span>Legs</span></div>
                 </div>
               </article>
@@ -173,7 +194,7 @@
                 <span class="wgj-benefit-number" aria-hidden="true">02</span>
                 <div>
                   <h3>Progress you can read</h3>
-                  <p>Review PRs, best sets, volume, exercise history, trends, calendar summaries, and muscle heatmaps.</p>
+                  <p>Review PRs, volume, exercise history, and muscle heatmaps. Explore achievement goals, share milestones and individual PRs, and revisit the year's highlights in a recap.</p>
                   <div class="wgj-progress-signal" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
                 </div>
               </article>
@@ -181,8 +202,29 @@
                 <span class="wgj-benefit-number" aria-hidden="true">03</span>
                 <div>
                   <h3>Local-first by design</h3>
-                  <p>Your core training loop remains usable on-device. Cloud backup is additive, never the price of admission.</p>
+                  <p>Log workouts and edit templates on your device. Supported saved data can use private iCloud backup and restore when available; active drafts stay local.</p>
                   <div class="wgj-local-signal"><span></span> Available on-device</div>
+                </div>
+              </article>
+              <article class="wgj-benefit">
+                <span class="wgj-benefit-number" aria-hidden="true">04</span>
+                <div>
+                  <h3>Outdoor walks, runs, and rides</h3>
+                  <p>Record time, distance, pace, and a GPS route with location permission. Pause when you need to, then review the route with your saved workout.</p>
+                </div>
+              </article>
+              <article class="wgj-benefit">
+                <span class="wgj-benefit-number" aria-hidden="true">05</span>
+                <div>
+                  <h3>Apple Health, when you choose</h3>
+                  <p>Opt in to save newly completed workouts to Apple Health. Share available estimated active calories separately, or keep your workout log in WGJ.</p>
+                </div>
+              </article>
+              <article class="wgj-benefit">
+                <span class="wgj-benefit-number" aria-hidden="true">06</span>
+                <div>
+                  <h3>A glance at your workout</h3>
+                  <p>Turn on Live Activities to see workout timers, set progress, rest countdowns, or cardio stats on the Lock Screen and Dynamic Island where supported.</p>
                 </div>
               </article>
             </div>
@@ -196,24 +238,85 @@
               <h2 id="screenshots-title">Real app flows</h2>
             </div>
           </div>
-          <div class="screenshot-gallery" aria-label="We Go Jim screenshots">
+          <p class="muted">Swipe or scroll through the gallery. Open any screenshot for a closer look.</p>
+          <div class="screenshot-gallery" aria-label="We Go Jim iPhone screenshots" tabindex="0">
             <figure>
-              <img src="../assets/wgj-template.png" alt="We Go Jim template preview screen">
-              <figcaption>Templates</figcaption>
+              <a href="../assets/wgj-start-workout.png" target="_blank" rel="noopener" aria-label="Open pick your workout screenshot at full size">
+                <img src="../assets/wgj-start-workout.png" width="1206" height="2622" loading="lazy" alt="Workout templates for push, pull, legs, and outdoor cardio">
+              </a>
+              <figcaption>Pick your workout</figcaption>
             </figure>
             <figure>
-              <img src="../assets/wgj-profile.png" alt="We Go Jim profile and training highlights screen">
-              <figcaption>Profile</figcaption>
+              <a href="../assets/wgj-template.png" target="_blank" rel="noopener" aria-label="Open plan your sets screenshot at full size">
+                <img src="../assets/wgj-template.png" width="1206" height="2622" loading="lazy" alt="Push-day template with planned exercises and set targets">
+              </a>
+              <figcaption>Plan your sets</figcaption>
             </figure>
             <figure>
-              <img src="../assets/wgj-history.png" alt="We Go Jim workout history screen">
-              <figcaption>History</figcaption>
+              <a href="../assets/wgj-active-workout.png" target="_blank" rel="noopener" aria-label="Open log every set screenshot at full size">
+                <img src="../assets/wgj-active-workout.png" width="1206" height="2622" loading="lazy" alt="Active push workout with weights, reps, and previous performance">
+              </a>
+              <figcaption>Log every set</figcaption>
             </figure>
             <figure>
-              <img src="../assets/wgj-progress.png" alt="We Go Jim muscle heatmap and progress screen">
-              <figcaption>Progress</figcaption>
+              <a href="../assets/wgj-profile.png" target="_blank" rel="noopener" aria-label="Open make it yours screenshot at full size">
+                <img src="../assets/wgj-profile.png" width="1206" height="2622" loading="lazy" alt="hortlund profile with the Leg Day Survivor badge and training highlights">
+              </a>
+              <figcaption>Make it yours</figcaption>
+            </figure>
+            <figure>
+              <a href="../assets/wgj-progress.png" target="_blank" rel="noopener" aria-label="Open see your training balance screenshot at full size">
+                <img src="../assets/wgj-progress.png" width="1206" height="2622" loading="lazy" alt="Muscle heatmap and training dashboard">
+              </a>
+              <figcaption>See your training balance</figcaption>
+            </figure>
+            <figure>
+              <a href="../assets/wgj-history.png" target="_blank" rel="noopener" aria-label="Open look back at the work screenshot at full size">
+                <img src="../assets/wgj-history.png" width="1206" height="2622" loading="lazy" alt="Workout calendar and completed training sessions">
+              </a>
+              <figcaption>Look back at the work</figcaption>
+            </figure>
+            <figure>
+              <a href="../assets/wgj-journey.png" target="_blank" rel="noopener" aria-label="Open celebrate your progress screenshot at full size">
+                <img src="../assets/wgj-journey.png" width="1206" height="2622" loading="lazy" alt="Training Journey with earned milestones and upcoming achievements">
+              </a>
+              <figcaption>Celebrate your progress</figcaption>
+            </figure>
+            <figure>
+              <a href="../assets/wgj-year-recap.png" target="_blank" rel="noopener" aria-label="Open your year in training screenshot at full size">
+                <img src="../assets/wgj-year-recap.png" width="1206" height="2622" loading="lazy" alt="Year recap with workout totals and training highlights">
+              </a>
+              <figcaption>Your year in training</figcaption>
+            </figure>
+            <figure>
+              <a href="../assets/wgj-exercises.png" target="_blank" rel="noopener" aria-label="Open find your next exercise screenshot at full size">
+                <img src="../assets/wgj-exercises.png" width="1206" height="2622" loading="lazy" alt="Searchable exercise library with muscle-group filters">
+              </a>
+              <figcaption>Find your next exercise</figcaption>
+            </figure>
+            <figure>
+              <a href="../assets/wgj-exercise-progress.png" target="_blank" rel="noopener" aria-label="Open watch your lifts grow screenshot at full size">
+                <img src="../assets/wgj-exercise-progress.png" width="1206" height="2622" loading="lazy" alt="Exercise progress chart and personal records">
+              </a>
+              <figcaption>Watch your lifts grow</figcaption>
             </figure>
           </div>
+        </section>
+
+        <section class="section wgj-ipad-showcase" aria-labelledby="wgj-ipad-title">
+          <div>
+            <span class="eyebrow">On iPhone and iPad</span>
+            <h2 id="wgj-ipad-title">Your training, with room to explore.</h2>
+            <p>Keep your log close on iPhone, or give your dashboard more space on iPad. Set a weekly goal, check your personal records, and see how your training adds up.</p>
+            <p class="muted">Make your profile yours with a photo and a badge. Choose the dashboard widgets that matter to you, from muscle heatmaps to trends for individual exercises.</p>
+            <p class="muted">Requires iOS 18 or iPadOS 18 or later. Core training works offline; private iCloud backup and restore is available for supported saved data.</p>
+          </div>
+          <figure>
+            <a href="../assets/wgj-ipad-profile.png" target="_blank" rel="noopener" aria-label="Open the iPad profile screenshot at full size">
+              <img src="../assets/wgj-ipad-profile.png" width="2064" height="2752" loading="lazy" alt="We Go Jim on iPad showing hortlund's Leg Day Survivor profile, personal records, weekly goal, and muscle heatmap">
+            </a>
+            <figcaption>Actual iPad app · Profile dashboard</figcaption>
+          </figure>
         </section>
 
         <section class="section wgj-faq-section" aria-labelledby="wgj-faq-title">
@@ -235,7 +338,15 @@
             </details>
             <details class="faq-item">
               <summary>What can I track?</summary>
-              <p>Sets, reps, weight, cardio blocks, rest timers, notes, personal records, training volume, workout history, templates, goals, and progress trends.</p>
+              <p>You can track sets, reps, weight, supersets, drop stages, cardio duration, distance and pace, rest timers, notes, personal records, training volume, templates, goals, and progress trends. Outdoor walks, runs, and bike rides can record GPS routes with permission. Saved history powers training journeys, achievement goals, shareable milestones and personal records, and yearly recaps.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Does We Go Jim connect to Apple Health?</summary>
+              <p>Yes, if you enable it. Apple Health export is off by default. With permission, it saves newly completed workouts; estimated active calories have a separate opt-in. WGJ does not request access to other apps' Health data. Later edits or deletions in WGJ do not change records already saved to Health.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Do I need to allow location access?</summary>
+              <p>Only to record GPS routes for Outdoor Walk, Outdoor Run, or Outdoor Bike. With Precise Location permission, recording can continue while your screen is locked; pausing or finishing stops GPS. You can log other workouts without location access and enter cardio distance manually. Completed routes can join your private iCloud backup.</p>
             </details>
             <details class="faq-item">
               <summary>How do I request a feature or report a bug?</summary>

@@ -646,20 +646,23 @@ p { color: var(--muted); }
 }
 
 .screenshot-gallery {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 14px;
+  display: flex;
+  gap: 22px;
+  overflow-x: auto;
+  padding: 4px 0 20px;
+  scroll-snap-type: x mandatory;
 }
 
 .screenshot-gallery figure {
+  flex: 0 0 min(68vw, 260px);
   margin: 0;
+  scroll-snap-align: start;
 }
 
 .screenshot-gallery img {
+  display: block;
   width: 100%;
-  aspect-ratio: 9 / 16;
-  object-fit: cover;
-  object-position: top;
+  height: auto;
   border-radius: 22px;
   box-shadow: 0 20px 60px rgba(13, 21, 32, 0.18);
 }
@@ -669,6 +672,53 @@ p { color: var(--muted); }
   color: var(--muted);
   font-weight: 700;
   text-align: center;
+}
+
+.wgj-campaign {
+  margin-inline: 0;
+}
+
+.wgj-campaign img,
+.wgj-listing-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+}
+
+.wgj-listing-art {
+  grid-column: 1 / -1;
+}
+
+.wgj-ipad-showcase {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(28px, 5vw, 72px);
+}
+
+.wgj-ipad-showcase figure {
+  margin: 0;
+}
+
+.wgj-ipad-showcase img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+
+.wgj-ipad-showcase figcaption {
+  margin-top: 12px;
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .wgj-ipad-showcase {
+    grid-template-columns: 1fr;
+  }
 }
 
 .wgj-legal-nav {

@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://highball.se/</loc></url>
   <url><loc>https://highball.se/about.html</loc></url>
-  <url><loc>https://highball.se/apps.html</loc></url>
+  <url><loc>https://highball.se/apps.html</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://highball.se/lil-log.html</loc></url>
   <url><loc>https://highball.se/lil-log/a-cache-miss-is-a-confession.html</loc></url>
   <url><loc>https://highball.se/lil-log/a-memory-should-know-how-to-forget.html</loc></url>
@@ -31,7 +31,7 @@
   <url><loc>https://highball.se/lil-log/the-type-error-has-a-tempo.html</loc></url>
   <url><loc>https://highball.se/lil-log/the-verified-badge-is-not-a-blessing.html</loc></url>
   <url><loc>https://highball.se/lil-log/the-work-between-commits.html</loc></url>
-  <url><loc>https://highball.se/wgj/</loc><lastmod>2026-08-28</lastmod></url>
-  <url><loc>https://highball.se/wgj/privacy/</loc></url>
-  <url><loc>https://highball.se/wgj/terms/</loc></url>
+  <url><loc>https://highball.se/wgj/</loc><lastmod>2026-10-09</lastmod></url>
+  <url><loc>https://highball.se/wgj/privacy/</loc><lastmod>2026-10-09</lastmod></url>
+  <url><loc>https://highball.se/wgj/terms/</loc><lastmod>2026-10-09</lastmod></url>
 </urlset>
